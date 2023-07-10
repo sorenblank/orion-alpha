@@ -56,4 +56,5 @@ async def main():
         await bot.start(os.getenv("CURRENT_TOKEN"))
 
 #this is a github test
+#this is test 2
 asyncio.run(main())
