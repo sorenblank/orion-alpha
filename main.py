@@ -10,9 +10,9 @@ import requests
 from youtube_search import YoutubeSearch
 from pymongo import MongoClient
 import asyncio
+load_dotenv('.env')
 
-
-cluster = MongoClient("mongodb+srv://soren:cdD2_qWUYRk-d4G@orion.iztml.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+cluster = MongoClient(os.getenv("CLOUD"))
 base = cluster["OrionDB"]
 ign_cur = base["ign"]
 
@@ -51,7 +51,7 @@ async def _8ball(interaction:discord.Interaction, choice:str):
     await interaction.response.send_message(random.choice(responses))
 
 
-load_dotenv('.env')
+
 
 async def main():
     async with bot:

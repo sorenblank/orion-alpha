@@ -6,10 +6,12 @@ from discord import app_commands
 import random
 import re
 import os
+from dotenv import load_dotenv
 import requests
 from pymongo import MongoClient
+load_dotenv('.env')
 
-cluster = MongoClient("mongodb+srv://soren:cdD2_qWUYRk-d4G@orion.iztml.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+cluster = MongoClient(os.getenv("CLOUD"))
 base = cluster["OrionDB"]
 
 ign_cur = base["ign"]
