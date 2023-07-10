@@ -50,8 +50,6 @@ async def _8ball(interaction:discord.Interaction, choice:str):
     await interaction.response.send_message(random.choice(responses))
 
 
-
-
 async def main():
     async with bot:
         await load_extensions()
