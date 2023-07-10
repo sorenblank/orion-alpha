@@ -57,4 +57,5 @@ async def main():
         await load_extensions()
         await bot.start(os.getenv("CURRENT_TOKEN"))
 
+#this is a github test
 asyncio.run(main())
