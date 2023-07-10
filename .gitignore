@@ -1,1 +1,7 @@
 .env
+
+venv/
+
+pyproject.toml
+.replit
+.breakpoints
