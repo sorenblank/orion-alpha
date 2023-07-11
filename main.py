@@ -9,6 +9,7 @@ import os
 import requests
 from pymongo import MongoClient
 import asyncio
+from webserver import uptime
 load_dotenv('.env')
 
 cluster = MongoClient(os.getenv("CLOUD"))
@@ -55,8 +56,8 @@ async def main():
         await load_extensions()
         await bot.start(os.getenv("CURRENT_TOKEN"))
 
-#this is a github test
-#this is test 2
-#this is test 3
-#this is test 4
+#maintaining server uptime
+uptime()
+
+#running the bot
 asyncio.run(main())
