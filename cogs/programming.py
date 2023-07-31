@@ -76,7 +76,7 @@ value = "\
         py.set_author(name = "PYTHON LEARNING RESOURCES",icon_url="https://cdn.discordapp.com/emojis/814811189241970718.png?v=1")
         await interaction.response.send_message(embed = py)
 
-    @group.command(name = "web")
+    @group.command(name = "web", description="Provides you with web dev resources")
     async def web(self,interaction:discord.Interaction):
         web = discord.Embed(
                   color = 0xf16524,
